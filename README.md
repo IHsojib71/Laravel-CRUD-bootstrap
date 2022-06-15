@@ -1,1 +1,1 @@
-This is a simple CRUD system using laravel 9 and bootstrap 5.2. It has also image upload facility with edit option.
+This is a simple CRUD system using laravel 9 and bootstrap 5.2. It has also image upload facility with edit option. To run this project create a database "laravel_crud" then import the laravel_crud.sql file. After openning the project run the project using "php artisan serve".
