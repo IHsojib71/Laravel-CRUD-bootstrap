@@ -22,7 +22,7 @@ class CrudController extends Controller
           $prod->save();
        
      
-    return redirect('/');
+    return redirect('/')->with('msg','Product Added Successfully!');
 }
 
 public function get_data(){
@@ -61,7 +61,7 @@ public function update(Request $req,$id){
         $update_data->update();
     }
     
-    return redirect('/');
+    return redirect('/')->with('msg','Updated Successfully!');
    
    
 }
@@ -69,7 +69,7 @@ public function update(Request $req,$id){
 public function delete_data($id){
     $data = Product::find($id);
     $data->delete();
-    return redirect('/');
+    return redirect('/')->with('delete_msg','Product Deleted Successfully!');
 }
 
 

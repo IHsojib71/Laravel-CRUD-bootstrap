@@ -44,6 +44,7 @@
     </div>
   </div>
 <div class="container">
+  
   <table class="table mt-5">
     <thead class="bg-success text-white fw-bold">
       <th>S.N.</th>
@@ -70,7 +71,16 @@
   </table>
 
   {{$prod_data->links()}}
-  
+  @if ($msg = session('msg'))
+  <div class="alert alert-success" role="alert">
+      {{$msg}}
+    </div>
+  @endif
+  @if ($delete_msg = session('delete_msg'))
+  <div class="alert alert-danger" role="alert">
+      {{$delete_msg}}
+    </div>
+  @endif
 </div>
  
 @endsection
